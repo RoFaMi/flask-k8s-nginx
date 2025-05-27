@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+  <script>
+    async function fetchMessage() {
+      const response = await fetch("/api");
+      const data = await response.json();
+      document.getElementById("message").innerText = data.message;
+    }
+    window.onload = fetchMessage;
+  </script>
+</head>
+<body>
+  <h1 id="message">Cargando...</h1>
+</body>
+</html>
